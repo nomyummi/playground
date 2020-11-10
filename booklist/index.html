@@ -1,0 +1,56 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Book List</title>
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <img src="book-stack.png" id="book-list-logo">
+    <h2>BookList</h2>
+  </header>
+  <button id="add-book-button">+ Add Book</button>
+  <div id="darkened-background"></div>
+  <div id="form-wrapper">
+    <form id="new-book-form">
+      <h2 id="form-title">New Book</h2>
+      <button type="button" id="cancel-button">x</button>
+      <label for="title">Title</label>
+      <input type="text" id="title" value="">
+
+      <label for="author">Author</label>
+      <input type="text" id="author" value="">
+
+      <label for="num-pages">Number of Pages</label>
+      <input type="number" id="num-pages" value="0" min="0">
+
+      <label for="read-status-radio-buttons">Read Status</label>
+      <div id="read-status-radio-buttons">
+        <label for="read-status-read">
+          <input type="radio" id="read-status-read" name="read-status" value="read" checked>
+          <span>Read</span>
+        </label>
+        <label for="read-status-in-progress">
+          <input type="radio" id="read-status-in-progress" name="read-status" value="in-progress">
+          <span>In Progress</span>
+        </label>
+        <label for="read-status-not-read">
+          <input type="radio" id="read-status-not-read" name="read-status" value="not-read">
+          <span>Not Read</span>
+        </label>
+      </div>
+      <button type="button" id="submit-form">Add</button>
+      <button type="button" id="update-book">Update</button>
+      <button type="button" id="delete-book">Delete</button>
+    </form>
+  </div>
+  <div id="book-grid">
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

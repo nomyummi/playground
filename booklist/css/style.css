@@ -1,0 +1,285 @@
+:root {
+    --border-radius: 5px;
+    --light-blue:rgb(182, 215, 245);
+    --dark-blue: rgb(7, 36, 59);
+    --hover-blue: rgb(154, 192, 228);
+    --red: #ec7888;
+    --yellow: #ebde71;
+    --green: #9dec78;
+    --darkened-background-color: rgba(0,0,0,0.2);
+    --primary-background-color: white;
+    --secondary-background-color: rgb(253, 253, 252);
+    --form-input-border: #cccccc;
+}
+
+body {
+    font-family: 'Alegreya', serif;
+    background-color: var(--primary-background-color);
+}
+
+body header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    cursor: default;
+}
+
+body header h2 {
+    font-size: 34px;
+    font-weight: bolder;
+}
+
+#book-list-logo {
+    height: 46.5px;
+    width: 43px;
+    padding-right: 10px;
+}
+#add-book-button {
+    display: grid;
+    justify-content: center;
+    padding: 0.5em 1em 0.5em 1em;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: var(--border-radius);
+    background-color: var(--light-blue);
+    margin: 0px auto 35px auto;
+}
+
+#add-book-button:hover {
+    background-color: var(--dark-blue);
+    color: var(--secondary-background-color);
+}
+
+#book-grid {
+    display:grid;
+    text-align: center;
+    grid-template-columns: repeat(auto-fit,minmax(240px,min-content));
+    grid-column-gap: 2rem;
+    justify-content: center;
+}
+
+.book {
+    display: grid;
+    background-color: var(--secondary-background-color);
+    border-radius: var(--border-radius);
+    box-shadow: 1px 1px 10px 1px rgba(223, 219, 219, 0.80);
+    margin-bottom: 2rem;
+}
+
+.book div:first-child {
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+}
+
+.book div:last-child {
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+}
+.title-grid {
+    display: flex;
+    background-color:  var(--dark-blue);
+    color: var(--secondary-background-color);
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    height: 90px;
+    overflow: auto; 
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.title-grid span {
+    margin: auto 0;
+}
+
+.author-grid {
+    font-size: 17px;
+    font-weight: bold;
+    padding: 12px;
+    height: 20px;
+    overflow: auto;
+    background-color: var(--light-blue);
+}
+
+.num-pages-grid {
+    font-size: 17px;
+    padding: 16px;
+}
+
+.read-status-grid {
+    font-size: 17px;
+    padding: 24px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.edit-button {
+    position: absolute;
+    border-radius: var(--border-radius);
+    border: 2px solid var(--light-blue);
+    padding: 2px 3px 3px 4px;
+    background-color: var(--light-blue);
+    margin-top: 225px;
+    margin-left: 192px;
+    visibility: hidden;
+}
+
+.edit-button:hover {
+    background-color: var(--dark-blue);
+    color: var(--secondary-background-color);
+}
+
+#form-wrapper {
+    display: flex;
+    justify-content: center;
+    visibility: hidden;
+    z-index: 1;
+}
+
+@keyframes fade-in {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+}
+#darkened-background {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--darkened-background-color);
+    visibility: hidden;
+}
+form {
+    display: grid;
+    position: absolute;
+    background-color: var(--secondary-background-color);
+    padding: 1rem 2.5rem 2.2rem 2.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: 1px 1px 10px 1px rgba(141, 137, 137, 0.8);
+    width: 300px;
+    font-size: 18px;
+    font-weight: bold;
+    
+}
+
+form input {
+    padding: 7px;
+    margin: 12.5px 0px 25px 0px;
+    border-radius: var(--border-radius);
+    border: 2px solid var(--form-input-border);
+}
+
+form h2 {
+    text-align: center;
+    padding-bottom: 5px;
+    border-bottom: 2px solid var(--form-input-border);
+}
+
+#submit-form {
+    justify-self: center;
+    padding: 6px 24px;
+    border: 2px solid var(--light-blue);
+    border-radius: var(--border-radius);
+    background-color: var(--light-blue);
+    font-weight: bold;
+}
+
+#submit-form:hover {
+    background-color: var(--dark-blue);
+    color: var(--secondary-background-color);
+}
+
+#update-book {
+    position: absolute;
+    justify-self: start;
+    align-self: end;
+    margin-left: 75px;
+    margin-bottom: 33px;
+    padding: 8px 21px;
+    border: 2px solid var(--light-blue);
+    border-radius: var(--border-radius);
+    background-color: var(--light-blue);
+    font-weight: bold;
+    visibility: hidden;
+}
+#update-book:hover {
+    background-color: var(--dark-blue);
+    color: var(--secondary-background-color);
+}
+#delete-book {
+    position: absolute;
+    justify-self: end;
+    align-self: end;
+    margin-right: 75px;
+    margin-bottom: 33px;
+    padding: 8px 24px;
+    border: 2px solid #fab3bd;
+    border-radius: var(--border-radius);
+    background-color:  #fab3bd;
+    font-weight: bold;
+    visibility: hidden;
+}
+#delete-book:hover {
+    background-color: var(--red);
+    color: var(--dark-blue);
+}
+
+#cancel-button {
+    border-radius: 50%;
+    font-family: arial;
+    font-size: 14px;
+    opacity: 40%;
+    padding: 1px 5px 2px 5px;
+    background-color: var(--secondary-background-color);
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    border: none;
+}
+#cancel-button:hover {
+    background-color: var(--red);
+}
+/* Radio Buttons */
+#read-status-radio-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+#read-status-radio-buttons label{
+    padding: 10px;
+    font-size: 17px;
+    font-weight: normal;
+}
+
+input[type="radio"]:after {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    top: -1px;
+    left: -1px;
+    position: relative;
+    background-color: #d4d4d4;
+    border: 2px solid#d4d4d4;
+    content: '';
+    display: inline-block;
+}
+
+#read-status-read:checked:after {
+    background-color: var(--green);
+    border: 2px solid var(--green);
+}
+input[type="radio"]:checked ~ span{
+    font-weight: bold;
+}
+
+#read-status-in-progress:checked:after {
+    background-color: var(--yellow);
+    border: 2px solid var(--yellow);
+}
+
+#read-status-not-read:checked:after {
+    background-color: var(--red);
+    border: 2px solid var(--red);
+}
+
