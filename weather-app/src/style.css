@@ -1,0 +1,214 @@
+@import '~@fortawesome/fontawesome-free/css/fontawesome.css';
+@import '~@fortawesome/fontawesome-free/css/solid.css';
+
+:root {
+  --header-background-color:rgb(5, 57, 124);
+  --font-color: white;
+  --focus-color: rgb(38, 153, 246);
+  --header-height: 70px;
+}
+
+body {
+  font-family: 'Merriweather Sans', sans-serif;
+  color: var(--font-color);
+  
+}
+
+header {
+  display: flex;
+  background-color: var(--header-background-color);
+  align-items: center;
+  justify-content: space-between;
+  height: var(--header-height);
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#app-logo {
+  display: flex;
+  font-size: 25px;
+  font-weight: bold;
+  align-items: center;
+  cursor: pointer;
+}
+
+#cloud-logo {
+  font-size: 55px;
+  margin-right: 5px;
+}
+
+.search-bar {
+  font-size: 18px;
+  display: flex;
+}
+
+.search-bar input {
+  height: 35px;
+  width: 400px;
+  background-color: var(--header-background-color);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 3px solid var(--font-color);
+  margin-right: 10px;
+  color: var(--font-color);
+  padding-left: 0px;
+}
+.search-bar input::placeholder {
+  color: var(--font-color);
+}
+.search-bar input:focus {
+  outline: none;
+  border-bottom: 3px solid var(--focus-color);
+}
+.search-bar input:hover {
+  border-bottom: 3px solid var(--focus-color);
+}
+
+button {
+  border: 4px solid var(--font-color);
+  background-color: var(--header-background-color);
+  border-radius: 5px;
+  height: 38px;
+  width: 40px;
+}
+button i {
+  color: var(--font-color);
+}
+
+#search-button:hover {
+  background-color: var(--font-color);
+}
+#search-button:hover i{
+  color: var(--header-background-color);
+}
+#search-button:focus {
+  outline:none;
+}
+
+.algolia-places {
+  color:black;
+}
+
+.ap-icon-pin {
+  visibility: hidden;
+}
+
+#weather-container {
+  display:grid;
+  color: black;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  position: absolute;
+  top: var(--header-height);
+  bottom: 20%;
+  left: 0;
+  right: 0;
+}
+.weather-location {
+  font-size: 2.3em;
+}
+.current-weather-image {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.current-weather-description {
+  font-size: 1.7em;
+  text-transform: capitalize;
+  padding-bottom: 0.5em;
+}
+.current-weather-property {
+  font-size: 1.1em;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+}
+#loading-sun {
+  height: auto;
+  width: 70%;
+}
+
+.rotate {
+  animation: rotation 3.5s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+/* Toggle slider*/
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 59px;
+  height: 30px;
+  justify-self: center;
+  margin-top: 7px;
+}
+
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ffb300;
+  -webkit-transition: .4s;
+  transition: .4s;
+   border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 5px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #ff5100;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px  #ff5100;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(27px);
+  -ms-transform: translateX(27px);
+  transform: translateX(27px);
+}
+
+/*------ ADDED CSS ---------*/
+.slider:after
+{
+ content:'°F';
+ color: white;
+ display: block;
+ position: absolute;
+ transform: translate(-50%,-50%);
+ top: 50%;
+ left: 68%;
+ font-size: 14px;
+}
+
+input:checked + .slider:after
+{  
+  left: 32%;
+  content:'°C';
+}

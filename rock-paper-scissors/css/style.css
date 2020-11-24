@@ -1,0 +1,43 @@
+#selections {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 150px 150px 150px;
+    grid-template-rows: 75px;
+    column-gap: 50px;
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+#scores {
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    grid-template-columns: 250px 250px;
+    grid-template-rows: 60px 60px 60px;
+    font-size: 50px;
+    margin-top: 30px;
+}
+#player-score {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+#cpu-score {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+#player {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+#cpu {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+#player-move{
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+}
+#cpu-move {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}

@@ -1,22 +1,15 @@
+//TODO: Change this class to a factory function (put in comments)
 class Book {
-    titleText;
-    authorText;
-    numPages;
-    readStatus;
-
     bookElement;
     titleChild;
     titleChildText;
     authorChild;
+    numPages;
     numPagesChild;
     readStatusChild;
     editButton;
     constructor(title,author,numPages, readStatus){
-        this.titleText = title ? title : "---";
-        this.authorText = author ? author : "---";
         this.numPages = numPages;
-        this.readStatus = readStatus;
-    
         // Add book to the grid
         this.bookElement = document.createElement("div");
         this.bookElement.classList.add("book");
@@ -24,13 +17,13 @@ class Book {
         this.titleChild = document.createElement("div");
         this.titleChild.classList.add("title-grid");
         this.titleChildText = document.createElement("span");
-        this.titleChildText.textContent = this.titleText;
+        this.titleChildText.textContent = title ? title : "---";
         this.titleChild.appendChild(this.titleChildText);
         this.bookElement.appendChild(this.titleChild);
 
         this.authorChild = document.createElement("div");
         this.authorChild.classList.add("author-grid");
-        this.authorChild.textContent = this.authorText;
+        this.authorChild.textContent = author ? author : "---";
         this.bookElement.appendChild(this.authorChild);
 
         this.numPagesChild = document.createElement("div");
@@ -40,7 +33,7 @@ class Book {
 
         this.readStatusChild = document.createElement("div");
         this.readStatusChild.classList.add("read-status-grid");
-        this.readStatusChild.textContent = this.readStatus;
+        this.readStatusChild.textContent = readStatus;
         this.bookElement.appendChild(this.readStatusChild);
         
         this.editButton = document.createElement("button");
@@ -50,15 +43,15 @@ class Book {
         this.editButton.inEditMode = true;
         this.editButton.addEventListener("click",(e)=>{
             showForm(e);
-            titleInput.value = this.titleText;
-            authorInput.value = this.authorText;
+            titleInput.value = this.titleChildText.textContent;
+            authorInput.value = this.authorChild.textContent;
             numPagesInput.value = this.numPages;
-            let readStatus = {
+            let readStatusToNum = {
                 "read": 0,
                 "in progress" : 1,
                 "not read": 2
             };
-            radioButtonsInput[readStatus[this.readStatus]].checked = true;
+            radioButtonsInput[readStatusToNum[this.readStatusChild.textContent]].checked = true;
             this.editButton.style.visibility = "hidden";
             bookBeingEdited = this;
         });
@@ -72,19 +65,16 @@ class Book {
         bookGrid.appendChild(this.bookElement);
     }
 
-    deleteBookElement(){
+    deleteBookElement = () => {
         this.bookElement.remove();
     }
 
-    updateBookElement(title,author,numPages,readStatus){
-        this.titleText = title;
-        this.authorText = author;
+    updateBookElement = (title,author,numPages,readStatus) =>{
+        this.titleChildText.textContent = title;
+        this.authorChild.textContent = author;
         this.numPages = numPages;
-        this.readStatus = readStatus;
-        this.titleChildText.textContent = this.titleText;
-        this.authorChild.textContent = this.authorText;
         this.numPagesChild.textContent = this.numPages +  " pages";
-        this.readStatusChild.textContent = this.readStatus;
+        this.readStatusChild.textContent = readStatus;
     }
 }
 let bookBeingEdited;
