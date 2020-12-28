@@ -1,17 +1,42 @@
-.CardsGrid{
+@import-normalize;
+
+.App{
   display: grid;
-  grid-template-columns: repeat(3, minmax(min-content,1fr));
-  grid-gap: 10px;
-  padding: 10px;
+  justify-content: center;
+}
+.CardsGrid{
+  display: flex;
+  /* grid-template-columns: repeat(auto-fill); */
+  flex-wrap: wrap;
+  justify-content: center;
+  grid-gap: 2rem;
+  max-width: 1500px; /* Maximum of 5 columns*/
 }
 
-.Card{
-  border: 1px solid black;
-  width: 100%;
-  height: 100%;
+.Card img{
+  transition: transform .2s;
+  border-radius: 10px;
+  height: 342px;
+  width: 245px;
+}
+
+.Card img:hover {
+  transform: scale(1.05);
+}
+
+.Scoreboard {
+  display: grid;
+  justify-content: center;
   text-align: center;
+  margin: 10px;
 }
 
-.Card:hover {
-  background-color: rgb(217, 221, 191);
+h3 {
+  margin: 1px;
+}
+
+button {
+  height: 40px;
+  width: 100px;
+  margin: auto;
 }
