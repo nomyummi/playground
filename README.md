@@ -1,4 +1,4 @@
-Playground
+Playground - Playing around with web dev stuff 
 
 [Google Homepage](https://nomyummi.github.io/playground/google-homepage) <br />
     - Replicated the Google homepage visuals using HTML and CSS <br />
@@ -17,3 +17,7 @@ Playground
     - Created a basic weather app. <br />
     - User uses the autocomplete search bar to find the weather at a location. <br />
     - For practice with npm, webpack, Javascript modules, asynchronous functions, and APIs (Algolia, OpenWeatherMap). <br />
+[MemoryCard](https://nomyummi.github.io/playground/memory-card/build/) <br />
+    - **Work in Progress** - To do: Change the button to a search bar. Add more styling.
+    - Created a memory card game. To play, click a different card each time. <br />
+    - For practice with React and APIs (Pokemon TCG API). <br />
