@@ -2,9 +2,8 @@ import React, {useState,useEffect} from 'react';
 import Card from './Card.js';
 
 function CardsGrid(props){
-  const {handleGame} = props;
-  const [cards,setCards] = useState([1,2,3,4,5,6,7,8,9]);
-  const [image,setImage] = useState("");
+  const {cardIds,handleGame} = props;
+  const [cards,setCards] = useState([]);
 
   const shuffle = ()=> {
     const tempCards = [...cards];
@@ -15,18 +14,31 @@ function CardsGrid(props){
     setCards(tempCards);
   };
 
+  async function loadImageFromId(id) {
+    const pokemonCard = await (await fetch(`https://api.pokemontcg.io/v1/cards?id=${id}`)).json().then(queriedCards=>{return queriedCards.cards[0]});
+    setCards(cards=>[...cards,
+      {imageUrl: pokemonCard.imageUrl,
+        cardId: id}
+      ]);
+  }
+
   useEffect(()=>{
-    async function loadImage() {
-      const pokemonCard = await (await fetch("https://api.pokemontcg.io/v1/cards?id=pl2-114")).json().then(queriedCards=>{return queriedCards.cards[0]});
-      setImage(pokemonCard.imageUrl);
+    try {
+      setCards([]);
+      cardIds.forEach((cardId)=>{
+        loadImageFromId(cardId);
+      });
     }
-    loadImage();
-  },[]);
+    catch (error) {
+      console.log('Failed to load image: ' + error);
+    }
+  // eslint-disable-next-line
+  },[cardIds]);
   
   return (
     <div className="CardsGrid">
       {cards.map((card)=>(
-        <Card src={image} key={card} value={card} shuffle={shuffle} handleGame={handleGame}/>
+        <Card src={card.imageUrl} key={card.cardId} cardId={card.cardId} shuffle={shuffle} handleGame={handleGame}/>
       ))}
     </div>
     
