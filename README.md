@@ -18,6 +18,7 @@ Playground - Playing around with web dev stuff
     - User uses the autocomplete search bar to find the weather at a location. <br />
     - For practice with npm, webpack, Javascript modules, asynchronous functions, and APIs (Algolia, OpenWeatherMap). <br />
 [MemoryCard](https://nomyummi.github.io/playground/memory-card/build/) <br />
-    - **Work in Progress** - To do: Change the button to a search bar. Add more styling. Add error messages when API requests fail (e.g. too many requests)<br />
-    - Created a memory card game. To play, click a different card each time and try to reach the max score. <br />
+    - Created a Pokemon memory card game. To play, click a different Pokemon card each time and try to reach the max score. <br />
+    - Added a search functionality to search for any Pokemon. <br />
+    - Added a hard mode and a gallery mode for viewing cards. Uses a dropdown to switch between modes. <br />
     - For practice with React and APIs (Pokemon TCG API). <br />
