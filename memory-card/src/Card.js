@@ -1,15 +1,15 @@
 import React from 'react';
 
 function Card(props){
-  const {handleGame,shuffle} = props;
+  const {handleGame,shuffle,cardId,imageSrc} = props;
 
   function onClick(){
-    handleGame(props.cardId);
-    shuffle();
+    handleGame(cardId);
+    shuffle(cardId);
   }
   return (
     <div className="Card" onClick={onClick}>
-      <img src={props.src} alt=""/>
+      <img src={imageSrc} alt={cardId}/>
     </div>
   )
 }

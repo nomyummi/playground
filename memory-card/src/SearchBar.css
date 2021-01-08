@@ -1,0 +1,82 @@
+
+.SearchContainer {
+  justify-self: end;
+}
+#searchBarAndButton {
+  display: grid;
+  align-items: center;
+}
+.modeSelect {
+  width: 13.8rem;
+  height: 2.3rem;
+  margin-top: 0.8rem;
+  font-weight: bold;
+}
+
+.controlModeSelect {
+  border: 2px solid var(--font-color);
+  border-radius: 4px;
+  background-color: var(--font-color);
+  color: var(--background-color);
+}
+.arrowModeSelect {
+  border-color: white transparent transparent;
+}
+.is-open .arrowModeSelect{
+  border-color: transparent transparent white;
+}
+
+.Dropdown-option:hover {
+  background-color: #e9f5ff;
+  color: #333;
+}
+
+.Dropdown-option.is-selected {
+  background-color: #c6e5ff;
+  color: #333;
+}
+
+#searchBar {
+  grid-row: 1;
+  height: 2.3rem;
+  width: 11rem;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2px solid var(--font-color);
+  background-color: var(--background-color);
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: 'Asap', sans-serif;
+}
+#searchBar::placeholder {
+  font-size: 1.1rem;
+}
+#searchBar:focus {
+  outline: none;
+  border-bottom: 3px solid var(--font-color);
+}
+#searchBar:hover {
+  border-bottom: 3px solid var(--font-color);
+}
+
+#searchButton {
+  grid-row: 1;
+  height: 2.3rem;
+  width: 2.3rem;
+  border: 3px solid var(--font-color);
+  background-color: var(--background-color);
+  border-radius: 5px;
+  margin-left: 0.4rem;
+  margin-top: 0.2rem;
+}
+#searchButton i {
+  color :var(--font-color);
+  margin-top: 2px;
+}
+#searchButton:hover {
+  background-color: var(--font-color);
+}
+#searchButton:hover i{
+  color: var(--background-color);
+}
