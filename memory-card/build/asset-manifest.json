@@ -1,20 +1,25 @@
 {
   "files": {
-    "main.css": "/playground/memory-card/build/static/css/main.02e6dc8a.chunk.css",
-    "main.js": "/playground/memory-card/build/static/js/main.7a58a43e.chunk.js",
-    "main.js.map": "/playground/memory-card/build/static/js/main.7a58a43e.chunk.js.map",
+    "main.css": "/playground/memory-card/build/static/css/main.76a9015f.chunk.css",
+    "main.js": "/playground/memory-card/build/static/js/main.0a81b88c.chunk.js",
+    "main.js.map": "/playground/memory-card/build/static/js/main.0a81b88c.chunk.js.map",
     "runtime-main.js": "/playground/memory-card/build/static/js/runtime-main.b21bcb5a.js",
     "runtime-main.js.map": "/playground/memory-card/build/static/js/runtime-main.b21bcb5a.js.map",
-    "static/js/2.9bd27a27.chunk.js": "/playground/memory-card/build/static/js/2.9bd27a27.chunk.js",
-    "static/js/2.9bd27a27.chunk.js.map": "/playground/memory-card/build/static/js/2.9bd27a27.chunk.js.map",
+    "static/css/2.fbe0b137.chunk.css": "/playground/memory-card/build/static/css/2.fbe0b137.chunk.css",
+    "static/js/2.6b1ca1ee.chunk.js": "/playground/memory-card/build/static/js/2.6b1ca1ee.chunk.js",
+    "static/js/2.6b1ca1ee.chunk.js.map": "/playground/memory-card/build/static/js/2.6b1ca1ee.chunk.js.map",
     "index.html": "/playground/memory-card/build/index.html",
-    "static/css/main.02e6dc8a.chunk.css.map": "/playground/memory-card/build/static/css/main.02e6dc8a.chunk.css.map",
-    "static/js/2.9bd27a27.chunk.js.LICENSE.txt": "/playground/memory-card/build/static/js/2.9bd27a27.chunk.js.LICENSE.txt"
+    "static/css/2.fbe0b137.chunk.css.map": "/playground/memory-card/build/static/css/2.fbe0b137.chunk.css.map",
+    "static/css/main.76a9015f.chunk.css.map": "/playground/memory-card/build/static/css/main.76a9015f.chunk.css.map",
+    "static/js/2.6b1ca1ee.chunk.js.LICENSE.txt": "/playground/memory-card/build/static/js/2.6b1ca1ee.chunk.js.LICENSE.txt",
+    "static/media/Pokemon.120b8b05.png": "/playground/memory-card/build/static/media/Pokemon.120b8b05.png",
+    "static/media/App.css": "/playground/memory-card/build/static/media/fa-solid-900.46fdbd2d.woff"
   },
   "entrypoints": [
     "static/js/runtime-main.b21bcb5a.js",
-    "static/js/2.9bd27a27.chunk.js",
-    "static/css/main.02e6dc8a.chunk.css",
-    "static/js/main.7a58a43e.chunk.js"
+    "static/css/2.fbe0b137.chunk.css",
+    "static/js/2.6b1ca1ee.chunk.js",
+    "static/css/main.76a9015f.chunk.css",
+    "static/js/main.0a81b88c.chunk.js"
   ]
 }
