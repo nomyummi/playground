@@ -1,4 +1,4 @@
-Playground - Playing around with web dev stuff 
+Playground - Playing around with web dev stuff. Click on a project title below to see a demo of that particular project.
 
 [Google Homepage](https://nomyummi.github.io/playground/google-homepage) <br />
     - Replicated the Google homepage visuals using HTML and CSS <br />
